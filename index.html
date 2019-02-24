@@ -1,28 +1,79 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-us">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Psychic Game</title>
-    <link rel="stylesheet" type="text/css" href="/assets/css/style.css" />
-    <script type="javascript" href="/assets/javascript/game.js"></script>
+    <title>The Pyschic Game</title>
+
+    <link rel="stylesheet" type="text/css" href="./assets/css/style.css" />
   </head>
+
   <body>
     <div class="container">
-      <div>
-        <h1>The Psychic Game</h1>
-        <p>
-          <strong>Guess what letter I am thinking of! </strong>
-        </p>
+      <div class="header">
+        <div class="row">
+          <h1>Psychic Game</h1>
+        </div>
       </div>
 
-      <div>
-        <p>Wins:</p>
-        <p>Losses:</p>
-        <p>Guesses left:</p>
-        <p>Your guesses so far:</p>
+      <div class="row">
+        <h3>Guess what letter I'm thinking of...</h3>
+      </div>
+      <div class="row">
+        <div class="info">
+          Wins:
+        </div>
+      </div>
+
+      <div class="row">
+        <div>
+          <div class="populate" id="winCount">
+            0
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="info">
+          Losses:
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-12">
+          <div class="populate" id="lossCount">
+            0
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="info">
+          Guesses Remaining:
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-12">
+          <div class="populate" id="guessesLeft">
+            10
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-12, info">
+          Your Guesses:
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-12">
+          <div class="populate" id="guessedLetters">
+            guesses..
+          </div>
+        </div>
       </div>
     </div>
+
+    <script src="./assets/javascript/game.js"></script>
   </body>
 </html>

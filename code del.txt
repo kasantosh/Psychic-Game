@@ -1,0 +1,97 @@
+"use strict";
+var wins = 0;
+var losses = 0;
+var guesses = 0;
+var guesssofar = 0;
+
+var alphlist = [
+  "a",
+  "b",
+  "c",
+  "d",
+  "e",
+  "f",
+  "g",
+  "h",
+  "i",
+  "j",
+  "k",
+  "l",
+  "m",
+  "n",
+  "o",
+  "p",
+  "q",
+  "r",
+  "s",
+  "t",
+  "u",
+  "v",
+  "w",
+  "x",
+  "y",
+  "z"
+];
+
+var winsId = document.getElementById("winevent");
+var lossId = document.getElementById("lossevent");
+var guessleftId = document.getElementById("guessesleft");
+var guesssofarId = document.getElementById("guesssofar");
+var comments = document.getElementById("comments");
+
+var ind = Math.floor(Math.random() * 26);
+var compGuess = alphlist[ind];
+console.log(compGuess);
+var keypress = prompt("Press any alphabet");
+
+// var keypress = (document.onkeyup = function(event) {
+//   keypress = event.key.toLowerCase();
+//   console.log(keypress);
+// });
+
+var playGame = true;
+var j = 9;
+
+for (var i = 1; i < 10; i++) {
+  if (compGuess !== keypress) {
+    j--;
+    guessleftId.innerText = `Guesses left :  ${j}`;
+    guesssofarId.innerText = guesssofarId.innerText + keypress;
+    keypress = prompt("Press any alphabet");
+  }
+}
+
+// do {
+//       continueGame = true;
+//        do {
+//         for (i = 1; i < 10; i++) {
+//           if (keypress !== compGuess) {
+//           alert("Sorry not a match");
+//           j--;
+//           guessleftId.innerText = `Guesses left :  ${j}`;
+//           guesssofarId.innerText = `Your guesses so far :  ${i}`;
+//           keypress = prompt("Guess another alphabet");
+//           continue;
+//           losses++;
+//           lossId.innerText = `Losses :  ${losses}`;
+//         } else {
+//           alert("Perfect Guess");
+//           wins++;
+//           winsId.innerText = `Wins :  ${wins}`;
+//           lossId.innerText = `Losses :  ${losses}`;
+//           guessleftId.innerText = 'Guesses left :';
+//           guesssofarId.innerText = 'Your guesses so far :';
+//           break;
+//         }
+//         While (continueGame = false);
+//         }
+
+//       }
+
+//   playGame = confirm("Want to play a new game?");
+//   ind = Math.floor(Math.random() * 26);
+//   compGuess = alphlist[ind];
+//   console.log(compGuess);
+//   keypress = prompt("Press any alphabet");
+//   j = 9;
+// } while ((playGame = false));

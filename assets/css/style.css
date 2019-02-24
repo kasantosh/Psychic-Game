@@ -3,7 +3,7 @@
   height: 500px;
   text-align: center;
   border: black solid 1px;
-  margin: auto;
+  border-radius: 10px;
   background-color: #efefef;
 }
 
@@ -12,8 +12,10 @@ h1 {
 }
 .container p {
   text-align: left;
-  padding-left: 100px;
+  padding-left: 50px;
 }
 
-#instruct {
+#comments {
+  color: rgb(12, 197, 12);
+  font-weight: bold;
 }
